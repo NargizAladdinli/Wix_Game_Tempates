@@ -1,0 +1,56 @@
+#menu{
+    background: $black_rgba;
+    @include Img($pos:fixed,$z_index:999,$wid:$wid_100);
+    padding: 20px 0px;
+    .all{
+        @include Flex($j_content:space-around,$a_items:center);
+        img{ @include Img($wid:155px,$heit:25px,$o_fit:cover,$o_pos:center); }
+        .list{
+            @media (max-width:768px) { display: none; }
+            ul{
+                @include Flex($a_items:center,$gap:20px);
+                margin: 0 auto;
+                li{
+                    a{
+                        @include Text($t_decoration:none,$colrs:$white,$f_size:1.125rem,$f_weight:$weight_500);
+                        transition: .2s ease-in-out;
+                        &:hover{ color: $orange; }
+                    }
+                }
+            }
+        }
+        .mobile-menu{
+            display: none;
+            @media (max-width:768px) { 
+                display: block;
+                .nav-link{
+                    @include Flex($a_items:center,$gap:20px,$f_direction:column);
+                    // margin: 0 auto;
+                    @include Img($pos:absolute,$top:68px,$right:0px,$wid:50%);
+                    background-color: $black_rgba;
+                    // transform: translateX(100%);
+                    transition: 0.5s ease-in-out;
+                    li{
+                        a{
+                            @include Text($t_decoration:none,$colrs:$white,$f_size:1.125rem,$f_weight:$weight_500);
+                            transition: .2s ease-in-out;
+                            &:hover{ color: $orange; }
+                        }
+                    }
+                }
+                .burger{
+                    cursor: pointer;
+                    .bar{
+                        width: 25px;
+                        height: 3px;
+                        background-color: rgb(226, 226, 226);
+                        margin: 5px;
+                    }
+                }
+             }
+        }
+    }
+}
+.nav-active{
+    transform: translateX(100%);
+}

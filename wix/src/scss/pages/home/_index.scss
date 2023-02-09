@@ -1,0 +1,28 @@
+#swipe{
+    padding: 66px 0px;
+}
+#about{
+    .container{
+        max-width: 1140px;
+        button{
+            @include Img($wid:80px,$heit:80px);
+            margin: auto;
+            @include Text($radius:100%,$ground:$white,$colrs:$body_clr,$f_size:20px,$f_weight:$weight_700);
+            @include Flex($j_content:center,$a_items:center);
+            
+        }
+        .txt{
+            @include Flex($gap:20px);
+            h1{
+                font-family: 'Black Ops One', cursive;
+                @include Text($f_size:2.25rem,$l_spacing:5px);
+                @include Flex($gap:10px);
+                span{ @include Text($colrs:$orange); }
+            }
+            hr{
+                @include Text($ground:$orange,$border:none);
+                @include Img($wid:$wid_100,$heit:2px,$opacity:1);
+            }
+        }
+    }
+}
