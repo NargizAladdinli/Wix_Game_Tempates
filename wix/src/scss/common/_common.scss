@@ -10,7 +10,9 @@ body{
     background-color: $body_clr;
     font-family: 'Roboto Mono', monospace;
     color: $white;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.9s ease-in-out;
+    position: relative;
+    overflow-x: hidden;
 }
 .light-mode{
     background-color: $white;

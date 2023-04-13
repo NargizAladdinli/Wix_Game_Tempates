@@ -21,8 +21,8 @@ button.addEventListener('click', () => {
         button.innerText = "Dark"
     }
     else{
-        // button.style.background = "whtite"
-        // button.style.color = "#111"
+        button.style.background = "#fff"
+        button.style.color = "#111"
         button.innerText = "Light"
     }
 })

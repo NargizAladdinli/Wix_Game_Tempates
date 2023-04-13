@@ -28,9 +28,10 @@
                     // margin: 0 auto;
                     @include Img($pos:absolute,$top:68px,$right:0px,$wid:50%);
                     background-color: $black_rgba;
-                    // transform: translateX(100%);
+                    transform: translateX(100%) !important;
                     transition: 0.5s ease-in-out;
                     li{
+                        display: none;
                         a{
                             @include Text($t_decoration:none,$colrs:$white,$f_size:1.125rem,$f_weight:$weight_500);
                             transition: .2s ease-in-out;
@@ -52,5 +53,5 @@
     }
 }
 .nav-active{
-    transform: translateX(100%);
+    transform: translateX(0%) !important;
 }

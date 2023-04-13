@@ -58,7 +58,11 @@
     top: 68px;
     right: 0px;
     background-color: rgba(0, 0, 0, 0.8);
+    transform: translateX(100%);
     transition: 0.5s ease-in-out;
+  }
+  #menu .all .mobile-menu .nav-link li {
+    display: none;
   }
   #menu .all .mobile-menu .nav-link li a {
     text-decoration: none;
@@ -82,7 +86,7 @@
 }
 
 .nav-active {
-  transform: translateX(100%);
+  transform: translateX(0%) !important;
 }
 
 #swipe {
@@ -138,7 +142,9 @@ body {
   background-color: #111;
   font-family: "Roboto Mono", monospace;
   color: #fff;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.9s ease-in-out;
+  position: relative;
+  overflow: hidden;
 }
 
 .light-mode {
